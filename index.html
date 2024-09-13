@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Mening Saytim</title>
+    <style>
+        /* From Uiverse.io by kleenpulse */ 
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+  cursor: pointer;
+  /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  );
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%;
+  }
+
+  50% {
+    background-position: 70% 100%;
+  }
+
+  100% {
+    background-position: 31% 0%;
+  }
+}
+
+ .btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+    /* Top-left */ var(--border-width)
+      calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+    /* Top-left */ calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+    </style>
+</head>
+
+<body style="background-color: #35383b;">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Asomiddin</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input  class=" form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button style="position: absolute; " type="button" class="btn btn-primary" id="liveToastBtn">Bos</button>
+                
+                <div style="color: white;" class="toast-container position-fixed bottom-0 end-0 p-3" data-bs-theme="dark">
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <img style="width: 30px;" src="./img/download.jfif" class="rounded me-2" alt="...">
+                            <strong class="me-auto">sSs-Kakashi</strong>
+                            <small>1 s oldin</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Salom. bu xabar animeshnikdan!!!
+                        </div>
+                    </div>
+                </div>
+                <div style="position: relative; margin: 50px 0 0 0 ;" class="caruse">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                </div>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img style="height: 500px;"  src="./img/NTOS_OG-main.png" class="d-block w-100" alt="...">
+                    <div style="margin: 0 0 50px 0;" class="carousel-caption d-none d-md-block">
+                        <h5>Naruto</h5>
+                        <p>Nima deyishni bilmadim</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img style="height: 500px;" src="./img/solothumb-1710869747798.png" class="d-block w-100" alt="...">
+                    <div style="margin: 0 0 50px 0;" class="carousel-caption d-none d-md-block">
+                        <h5>Solo leveling</h5>
+                        <p>Nima deyishni bilmadim</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img style="height: 500px;" src="./img/filters_quality(95)format(webp).webp" class="d-block w-100" alt="...">
+                    <div style="margin: 0 0 50px 0;" class="carousel-caption d-none d-md-block">
+                        <h5>Shadow</h5>
+                        <p>Nima deyishni bilmadim </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div style="color: white; align-items: center; text-align: center; padding: 30px 0 20px 0;" class="title">
+                <h1>Salom <b>SsS-Kirito</b></h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, ratione quasi eos possimus debitis aut ut sint optio dolores earum! Voluptate eius repudiandae quidem autem sint consequatur iusto obcaecati at.</p>
+            </div>
+            <div class="row">
+                <div style="margin: 40px 0 0 80px ; border-radius: 10px; padding: 15px; background-color: #212429; color: white;" class="card1 col-3">
+                    <img style=" height: 230px; padding: 0 0 15px 0;" src="./img/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f425a4748724630354a396b767a673d3d2d313131313939313438322e3136626432383437656439353439346133323735393.png" class="card-img-top" alt="...">
+    
+                    <div class="card-body">
+                        <h5 class="card-title">AnimeVerse</h5><br>
+                        <p class="card-text"><b>Ma'nosi: </b> Anime dunyosining keng va rang-barang olami. <br>
+                            <b>Xususiyatlar: </b> Bu nom anime va manga haqida umumiy ma'lumotlar, sharhlar, va yangiliklarni taqdim etadigan sayt uchun mos keladi.</p>
+                        <a href="https://animeversefest.com/" class="btn btn-primary">Saytni Ko'rish</a>
+                    </div>
+                </div>
+                <div style="margin: 40px 0 0 80px ; border-radius: 10px; padding: 15px; background-color: #212429; color: white;" class="card1 col-3">
+                    <img style="height: 230px; padding: 0 0 15px 0;" src="./img/mangamania_banner.webp" class="card-img-top" alt="...">
+    
+                    <div class="card-body">
+                        <h5 class="card-title">MangaMania</h5> <br>
+                        <p class="card-text"><b>Ma'nosi: </b> Manga (Yaponiya komikslari) haqidagi bo'lgan qiziqish. <br>
+                            <b>Xususiyatlar: </b> Manga sharhlari, yangiliklar, yangi seriyalar haqida ma'lumotlar va manga yarmarkalari haqida ma'lumotlar taqdim etadigan sayt.</p>
+                        <a href="https://mangamaniafirenze.it/" class="btn btn-primary">saytni ko'rish</a>
+                    </div>
+                </div>
+                <div style=" margin: 40px 0 0 80px ; border-radius: 10px; padding: 15px; background-color: #212429; color: white;" class="card1 col-3">
+                    <img style="height: 230px; padding: 0 0 15px 0;" src="./img/1.png" class="card-img-top" alt="...">
+    
+                    <div class="card-body">
+                        <h5 class="card-title">CosplayRealm</h5><br>
+                        <p class="card-text"><b>Ma'nosi: </b> Cosplay (personajlarga o'xshash kiyinish san'ati) dunyosi. <br>
+                            <b>Xususiyatlar: </b> Cosplay fotosuratlari, kiyinish qo'llanmalar, va cosplay voqealarini o'z ichiga olgan sayt.</p>
+                        <a href="https://www.cosplayrealmmagazine.com/" class="btn btn-primary">Saytni korish</a>
+                    </div>
+                </div>
+                <div style="margin: 40px 0 0 80px ; border-radius: 10px; padding: 15px; background-color: #212429; color: white;" class="card1 col-3">
+                    <img style=" height: 230px; padding: 0 0 15px 0;" src="./img/0_rTKDM1kfQ3bKPikH.jpg" class="card-img-top" alt="...">
+    
+                    <div class="card-body">
+                        <h5 class="card-title">Wakanim</h5><br>
+                        <p class="card-text"><b>Tavsif: </b> Wakanim anime seriyalarini dub va subtitrlar bilan taqdim etadi, ayniqsa Evropa bozoriga qaratilgan.</p>
+                        <a href="https://www.wakanim.tv/" class="btn btn-primary">Saytni ko'rish</a>
+                    </div>
+                </div>
+                <div style="margin: 40px 0 0 80px ; border-radius: 10px; padding: 15px; background-color: #212429; color: white;" class="card1 col-3">
+                    <img style=" height: 230px; padding: 0 0 15px 0;" src="./img/318be067f0c97f27af538e6aa6812f31_fgraphic.png" class="card-img-top" alt="...">
+    
+                    <div class="card-body">
+                        <h5 class="card-title">AnimeLab</h5><br>
+                        <p class="card-text"><b>Tavsif: </b> AnimeLab Avstraliya va Yangi Zelandiya bozorida faoliyat yuritadi va ko'plab anime seriyalarini dub va subtitrlar bilan taklif etadi.</p>
+                        <a href="https://www.youtube.com/@animelab" class="btn btn-primary">Saytni ko'rish</a>
+                    </div>
+                </div>
+                <div style="margin: 40px 0 0 80px ; border-radius: 10px; padding: 15px; background-color: #212429; color: white;" class="card1 col-3">
+                    <img style=" height: 230px; padding: 0 0 15px 0;" src="./img/animefreak-homepage.jpg" class="card-img-top" alt="...">
+    
+                    <div class="card-body">
+                        <h5 class="card-title">AnimeFreak</h5><br>
+                        <p class="card-text"><b>Tavsif: </b> AnimeFreak ko'plab anime seriyalarini subtitrlar bilan taqdim etadi, ba'zan dub variantlari ham mavjud.</p>
+                        <a href="https://animefreak.video/" class="btn btn-primary">saytga ko'rish</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+
+    <section>
+        <div class="container">
+            <div style="align-items: center; margin: 80px 0 0 70px" class="me">
+                <p>
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">Biz haqimizda</button>
+                  </p>
+                  <div style="min-height: 120px; color: white;" data-bs-theme="dark">
+                    <div style="padding: 10px; border-radius: 15px;" class="collapse collapse-horizontal" id="collapseWidthExample">
+                      <div class="card card-body" style="width: 1100px;">
+                        <b>Bu sayt SsS-kirito uchun yaratildi.</b> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatem, facere voluptate ut ratione expedita repellat neque? Corporis numquam, nisi impedit magni atque qui eaque modi fugit esse asperiores consequuntur.
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+
+        if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+            toastTrigger.addEventListener('click', () => {
+                toastBootstrap.show()
+            })
+        }
+    </script>
+</body>
+
+</html>
